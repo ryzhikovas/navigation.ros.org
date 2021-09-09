@@ -46,7 +46,7 @@ Costmap Layers
 |                                |                        | sets of measurements             |
 +--------------------------------+------------------------+----------------------------------+
 | `Denoise Layer`_               |  Andrey Ryzhikov       | Filters noise-induced            |
-|                                |                        | freestanding obstacles or small  |
+|                                |                        | standalone obstacles or small    |
 |                                |                        | obstacles groups                 |
 +--------------------------------+------------------------+----------------------------------+
 
@@ -58,6 +58,8 @@ Costmap Layers
 .. _Spatio-Temporal Voxel Layer: https://github.com/SteveMacenski/spatio_temporal_voxel_layer/
 .. _Non-Persistent Voxel Layer: https://github.com/SteveMacenski/nonpersistent_voxel_layer
 .. _Denoise Layer: https://github.com/ryzhikovas/navigation2/tree/feature-costmap2d-denoise/nav2_costmap_2d/plugins/denoise_layer.cpp
+
+For tutorial on using Denoise Layer, please see :ref:`filtering_of_noise-induced_obstacles`.
 
 Costmap Filters
 ===============
