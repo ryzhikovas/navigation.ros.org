@@ -98,6 +98,12 @@ After that, obstacles corresponding to zero pixels are removed.
 .. image:: images/Filtering_of_noise-induced_obstacles/3x3_kernels.png
     :width: 222px
 
+This process is illustrated in the animation below (``group_connectivity_type`` = 4).
+Obstacles marked at the end of the animation will be removed.
+
+.. image:: images/Filtering_of_noise-induced_obstacles/dilate.gif
+    :width: 600px
+
 When parameter ``minimal_group_size`` > 2, the second algorithm is executed.
 This is a generalized solution that allows you to remove groups of adjacent obstacles if their total number is less than ``minimal_group_size``.
 To select groups of adjacent obstacles, the algorithm performs their segmentation.
@@ -106,3 +112,10 @@ Next, the size of each segment is calculated.
 Obstacles segments with size less than the ``minimal_group_size`` are replaced with empty cells.
 This algorithm is about 10 times slower, so use it with caution and only when necessary.
 Its execution time depends on the size of the processed map fragment (and not depend on the value of ``minimal_group_size``).
+
+This algorithm is illustrated in the animation below (``group_connectivity_type`` = 8).
+Obstacles marked at the end of the animation will be removed (groups that size less 3).
+
+.. image:: images/Filtering_of_noise-induced_obstacles/connected_components.gif
+    :width: 600px
+
